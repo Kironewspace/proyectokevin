@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distrisur</title>
+    <link rel="stylesheet" href="diseñito.css">
+</head>
+<body>
+    <header>
+        <img src="imagenes/pixelcut-export (2).png" alt="logo" style="width: 250px; height: 250px;">
+    </header>
+
+    <nav class="navbar">
+        <div class="hamburger" aria-controls="menu" aria-expanded="false" onclick="toggleMenu()">
+        </div>
+        <ul id="menu" class="menu" aria-labelledby="hamburger">
+            <li><a href="acerca_de.html">Acerca de nosotros</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="http://127.0.0.1:5005">Contacto</a></li>
+        </ul>
+        <div id="cart-icon" class="cart-icon" onclick="toggleCart()">
+            <img src="./imagenes/Pasted image.png" alt="Carrito" style="width: 24px; height: 24px;">
+            <span id="cart-count" class="cart-count">0</span>
+        </div>
+        <div class="busqueda">
+            <input type="text" placeholder="Buscar productos...">
+            <button>Buscar</button>
+        </div>
+    </nav>
+    <br>
+
+    <div class="slider">
+        <div class="slides">
+            <img src="imagenes/crush.jpg" alt="Dulce 1">
+            <img src="imagenes/cake.jpg" alt="Dulce 2">
+            <img src="imagenes/cacao.jpg" alt="Dulce 3">
+        </div>
+    </div>
+
+    <section id="productos" class="productos">
+        <div class="producto">
+            <img src="imagenes\cake.jpg" alt="Chocolate">
+            <h3>Chocolate</h3>
+            <p>Delicioso chocolate para satisfacer tus antojos.</p>
+            <button class="comprar">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="imagenes\paleta.jpg" alt="Caramelo">
+            <h3>Caramelo</h3>
+            <p>Saboroso caramelo para disfrutar en cualquier momento.</p>
+            <button class="comprar">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="imagenes\cacao.jpg" alt="Galletas">
+            <h3>Galletas</h3>
+            <p>Deliciosas galletas para acompañar tus momentos de relax.</p>
+            <button class="comprar">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="imagenes/paleta.jpg"Paletas">
+            <h3>Paletas</h3>
+            <p>Deliciosas Paletas para endulzar tus momentos.</p>
+            <button class="comprar">Agregar al carrito</button>
+        </div>
+    </section>
+
+    <div id="cart-dropdown" class="cart-dropdown">
+        <h3>Carrito de Compras</h3>
+        <ul id="cart-items"></ul>
+        <p id="empty-cart" style="display: none;">El carrito está vacío.</p>
+        <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    </div>
+
+    <script src="funciones.js"></script>
+    <footer>
+        <p>&copy; 2024 Distrisur. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

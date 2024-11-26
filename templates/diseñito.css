@@ -1,0 +1,263 @@
+
+body {
+    background-color: rgb(245, 221, 247);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+header {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+h3 {
+    font-size: 0.5em;
+    font-weight: 100;
+    margin: 10px 0 0 0;
+}
+
+
+.navbar {
+    background-color: #c95195;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #feadff;
+}
+
+.busqueda {
+    margin: 0 20px;
+}
+
+.busqueda input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.busqueda button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0aa5d4;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background 0.3s;
+}
+
+.busqueda button:hover {
+    background-color: #008bb5;
+}
+
+.slider {
+    position: relative;
+    width: 30%;
+    height: 30%;
+  
+    padding: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+}
+
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.producto {
+    width: 30%;
+    margin: 20px;
+    background-color: rgb(238, 152, 205);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.producto h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    margin-bottom: 20px;
+}
+
+.producto button {
+    background-color: #4e4e4e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.producto button:hover {
+    background-color: #69dcf8;
+}
+
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.cart-dropdown h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.cart-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-dropdown ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.cart-dropdown .empty-message {
+    text-align: center;
+    padding: 10px;
+    color: #888;
+}
+
+
+.cart-dropdown.active {
+    display: block;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+}
+
+
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
